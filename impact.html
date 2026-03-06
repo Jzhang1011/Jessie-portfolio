@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impact | Jessie Zhang</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Inter:wght@300..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <div class="brand">
+        <div class="name">Jessie Zhang</div>
+        <div class="tag">Impact Library</div>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a class="active" href="impact.html">Impact</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="playbooks.html">Playbooks</a>
+        <a href="ai.html">AI</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Header + Filters -->
+    <section class="card">
+      <h1 style="margin-top:0">Impact Library</h1>
+      <p class="small">A curated showcase of the systems I build to increase executive trust, decision velocity, and adoption at scale.</p>
+
+      <div class="badges" id="filters" aria-label="Filters">
+        <button class="chip" aria-pressed="true" data-tag="All" type="button">All</button>
+        <button class="chip" aria-pressed="false" data-tag="Ops" type="button">Ops</button>
+        <button class="chip" aria-pressed="false" data-tag="Governance" type="button">Governance</button>
+        <button class="chip" aria-pressed="false" data-tag="Measurement" type="button">Measurement</button>
+        <button class="chip" aria-pressed="false" data-tag="Journey" type="button">Journey</button>
+        <button class="chip" aria-pressed="false" data-tag="AI" type="button">AI</button>
+      </div>
+    </section>
+
+    <!-- BIG centered showcase -->
+    <section class="card showcase-card" style="margin-top:16px">
+      <div class="showcase-head">
+        <div>
+          <h2 style="margin:0">Impact showcase</h2>
+          <p class="small" id="showStatus" style="margin:8px 0 0">Showing 1 of 8</p>
+        </div>
+
+        <div class="impact-rotator__btns">
+          <button class="btn secondary" id="showPrev" type="button">Prev</button>
+          <button class="btn secondary" id="showNext" type="button">Next</button>
+          <button class="btn secondary" id="showPause" type="button">Pause</button>
+        </div>
+      </div>
+
+      <!-- iPad hands mockup with live screen overlay -->
+      <div class="ipad-hands" aria-label="Impact tiles rotating in iPad mockup">
+        <div class="ipad-screen">
+          <div class="tileShow tileShow--big" id="tileShow"></div>
+        </div>
+      </div>
+
+      <div class="btnrow" style="margin-top:16px">
+        <a class="btn secondary" href="case-studies.html">See full case studies →</a>
+        <a class="btn secondary" href="playbooks.html">See playbooks →</a>
+        <a class="btn secondary" href="ai.html">AI work →</a>
+      </div>
+    </section>
+
+    <script>
+      (function(){
+        const items = [
+          {
+            title: "KPI Operating System (multi-LOB)",
+            desc: "Standardized KPI definitions + QA + operating rhythm so leadership forums focus on decisions, not metric debates.",
+            tags: ["Ops","Governance","Measurement"],
+            link: "case-studies.html#kpi-os"
+          },
+          {
+            title: "Spend → revenue linkage (finance-grade)",
+            desc: "Connected expense and performance to revenue views to enable credible ROI conversations and investment allocation.",
+            tags: ["Ops","Measurement"],
+            link: "case-studies.html#spend-revenue"
+          },
+          {
+            title: "Funnel & lifecycle standardization (Marketing ↔ Sales)",
+            desc: "Defined lifecycle stages and conversion metrics to create a single funnel truth and improve planning inputs.",
+            tags: ["Ops","Measurement"],
+            link: "case-studies.html#pipeline"
+          },
+          {
+            title: "Journey measurement & prioritization",
+            desc: "Prioritized journeys and defined stage KPIs to focus optimization on the highest-leverage customer paths.",
+            tags: ["Journey","Measurement"],
+            link: "case-studies.html#journey"
+          },
+          {
+            title: "MIA: Marketing Intelligence Assistant",
+            desc: "Governed, role-based copilot with citations + no-inference rules to scale onboarding and self-serve intelligence.",
+            tags: ["AI","Ops","Governance"],
+            link: "ai.html#mia"
+          },
+          {
+            title: "MMM Copilot: learning + decision support",
+            desc: "Role- and scenario-based MMM enablement for channel owners and revenue marketers—always-on decision support.",
+            tags: ["AI","Measurement"],
+            link: "ai.html#mmm"
+          },
+          {
+            title: "Executive reporting risk reduction",
+            desc: "Reduced “spreadsheet surprises” via locked logic, QA steps, and governance that protects credibility in exec forums.",
+            tags: ["Ops","Governance"],
+            link: "playbooks.html"
+          },
+          {
+            title: "AI adoption operating model",
+            desc: "Scaled adoption through training cohorts, ambassadors, office hours, and internal comms—built to stick.",
+            tags: ["AI","Ops"],
+            link: "playbooks.html"
+          }
+        ];
+
+        const el = document.getElementById("tileShow");
+        const status = document.getElementById("showStatus");
+        const prev = document.getElementById("showPrev");
+        const next = document.getElementById("showNext");
+        const pause = document.getElementById("showPause");
+
+        const filterBar = document.getElementById('filters');
+        const filterBtns = Array.from(filterBar.querySelectorAll('button[data-tag]'));
+        let activeTag = "All";
+
+        let idx = 0;
+        let paused = false;
+        let timer = null;
+
+        function getActiveList(){
+          if (activeTag === "All") return items;
+          return items.filter(i => i.tags.includes(activeTag));
+        }
+
+        function render(){
+          const list = getActiveList();
+          if (list.length === 0){
+            el.innerHTML = `<div class="tileShow__desc">No items for this filter yet.</div>`;
+            status.textContent = `No items`;
+            return;
+          }
+
+          if (idx >= list.length) idx = 0;
+          if (idx < 0) idx = list.length - 1;
+
+          const it = list[idx];
+
+          el.innerHTML = `
+            <div class="tileShow__top">
+              <div>
+                <h3 class="tileShow__title">${it.title}</h3>
+              </div>
+              <a class="tileShow__cta" href="${it.link}">Proof →</a>
+            </div>
+
+            <div class="tileShow__desc">${it.desc}</div>
+
+            <div class="tileShow__tags">
+              ${it.tags.map(t => `<span class="chip static">${t}</span>`).join("")}
+            </div>
+          `;
+
+          el.classList.remove("tileFadeIn");
+          void el.offsetWidth;
+          el.classList.add("tileFadeIn");
+
+          status.textContent = `Showing ${idx + 1} of ${list.length} (${activeTag})`;
+        }
+
+        function goNext(){ idx += 1; render(); }
+        function goPrev(){ idx -= 1; render(); }
+
+        function start(){
+          stop();
+          timer = setInterval(() => { if (!paused) goNext(); }, 5000);
+        }
+        function stop(){
+          if (timer) clearInterval(timer);
+          timer = null;
+        }
+
+        next.addEventListener("click", () => { paused = true; pause.textContent = "Resume"; goNext(); });
+        prev.addEventListener("click", () => { paused = true; pause.textContent = "Resume"; goPrev(); });
+        pause.addEventListener("click", () => {
+          paused = !paused;
+          pause.textContent = paused ? "Resume" : "Pause";
+        });
+
+        el.addEventListener("mouseenter", () => { paused = true; pause.textContent = "Resume"; });
+        el.addEventListener("mouseleave", () => { paused = false; pause.textContent = "Pause"; });
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            activeTag = btn.dataset.tag;
+            idx = 0;
+            filterBtns.forEach(b => b.setAttribute('aria-pressed', (b.dataset.tag === activeTag).toString()));
+            render();
+          });
+        });
+
+        render();
+        start();
+      })();
+    </script>
+
+  </main>
+
+
+</body>
+</html>
