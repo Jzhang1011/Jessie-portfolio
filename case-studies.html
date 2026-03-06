@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Case Studies | Jessie Zhang</title>
+  <title>Strategy Case Studies | Jessie Zhang</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +17,14 @@
     <nav class="nav">
       <div class="brand">
         <div class="name">Jessie Zhang</div>
-        <div class="tag">Case Studies</div>
+        <div class="tag">Strategy Case Studies</div>
       </div>
       <div class="links">
         <a href="index.html">Home</a>
         <a href="impact.html">Impact</a>
         <a class="active" href="case-studies.html">Case Studies</a>
-        <a href="playbooks.html">Playbooks</a>
-        <a href="ai.html">AI</a>
+        <a href="playbooks.html">Frameworks</a>
+        <a href="ai.html">Decision Systems</a>
         <a href="about.html">About</a>
       </div>
     </nav>
@@ -33,25 +33,28 @@
   <main class="container">
     <!-- Header -->
     <section class="card">
-      <h1 style="margin-top:0">Case Studies</h1>
-      <p class="small">Left: rotating case summaries inside an iPad frame. Right: an illustrative dashboard artifact.</p>
+      <h1 style="margin-top:0">Strategy Case Studies</h1>
+      <p class="small">
+        A selection of strategy, growth, and business performance work across consulting, business operations,
+        corporate strategy, and decision infrastructure building.
+      </p>
 
       <div class="caseTabs" id="caseTabs" aria-label="Case selector">
-        <button class="chip" type="button" aria-pressed="true" data-case="kpi">KPI OS</button>
-        <button class="chip" type="button" aria-pressed="false" data-case="pipeline">Pipeline</button>
-        <button class="chip" type="button" aria-pressed="false" data-case="spend">Spend→Revenue</button>
-        <button class="chip" type="button" aria-pressed="false" data-case="journey">Journey</button>
+        <button class="chip" type="button" aria-pressed="true" data-case="market-expansion">Market Expansion</button>
+        <button class="chip" type="button" aria-pressed="false" data-case="portfolio">Portfolio Strategy</button>
+        <button class="chip" type="button" aria-pressed="false" data-case="global-expansion">Global Expansion</button>
+        <button class="chip" type="button" aria-pressed="false" data-case="branch-performance">Business Performance</button>
       </div>
     </section>
 
     <!-- Two-column viewer -->
     <section class="card" style="margin-top:14px">
       <div class="caseViewerGrid">
-        <!-- LEFT (70%): iPad frame -->
+        <!-- LEFT -->
         <div class="caseLeft">
           <div class="caseLeftHead">
             <div>
-              <div class="kicker">Case study</div>
+              <div class="kicker">Strategy case</div>
               <h2 id="caseTitle" style="margin:8px 0 0">—</h2>
               <p class="small" id="caseAngle" style="margin:8px 0 0">—</p>
             </div>
@@ -71,88 +74,94 @@
             </div>
             <div class="ipad-vert__camera"></div>
           </div>
-
-         
         </div>
 
-        <!-- RIGHT (30%): static dashboard png -->
+        <!-- RIGHT -->
         <div class="caseRight">
           <a class="dashShot" href="assets/Dashboard.png" target="_blank" rel="noopener">
-            <img src="assets/Dashboard.png" alt="Dashboard example" loading="lazy">
-        
+            <img src="assets/Dashboard.png" alt="Illustrative strategic framework artifact" loading="lazy">
           </a>
+          <p class="small" style="margin-top:10px">
+            Sample artifact illustrating structured analysis, performance framing, and decision support.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- AI CTA -->
+    <!-- Additional capability CTA -->
     <section class="card" style="margin-top:14px">
-      <h2>AI work</h2>
-      <p class="small">For MIA and MMM Copilot, see the AI page (includes governance + adoption details).</p>
+      <h2>Additional decision system work</h2>
+      <p class="small">
+        Beyond formal strategy projects, I’ve also built decision infrastructure that helps leadership connect
+        performance signals to investment decisions.
+      </p>
       <div class="btnrow">
-        <a class="btn" href="ai.html#mia">MIA Case →</a>
-        <a class="btn" href="ai.html#mmm">MMM Copilot Case →</a>
+        <a class="btn" href="ai.html#mia">AI Decision Support →</a>
+        <a class="btn" href="ai.html#mmm">Investment Decision Systems →</a>
       </div>
     </section>
 
     <script>
       (function(){
         const CASES = {
-          kpi: {
-            title: "KPI Operating System for Multi-LOB Marketing",
-            angle: "Ops + Intelligence • Standardization + trust",
+          "market-expansion": {
+            title: "Adjacent Market Expansion Strategy",
+            angle: "Corporate strategy • Growth opportunity evaluation • TAM + strategic fit",
             blocks: [
-              { k:"Context", t:"Multi-LOB reporting required consistent KPIs and repeatable executive readouts." },
-              { k:"What was broken", t:"Inconsistent definitions and manual processes created trust and accuracy risk." },
-              { k:"What I did", t:"Established KPI definitions, governance, QA steps, and a monthly operating rhythm." },
-              { k:"What shipped", t:"KPI dictionary + governance, dashboard index, MOR template." },
-              { k:"Adoption", t:"Embedded into rhythms; enabled stakeholders via documentation and support." },
-              { k:"Outcomes", t:"Improved exec confidence and reduced reporting risk." },
-              { k:"Next", t:"Expand automation and metric health monitoring." }
+              { k:"Context", t:"WEX was evaluating adjacent market opportunities to support long-term growth beyond existing core segments." },
+              { k:"Strategic question", t:"Which adjacent markets offer the best balance of market size, competitive attractiveness, and strategic fit?" },
+              { k:"Approach", t:"Conducted market landscape analysis, TAM sizing, competitive assessment, and strategic fit evaluation." },
+              { k:"Key insights", t:"Some large markets had attractive size but weak fit or intense competition; a smaller set of opportunities offered stronger long-term strategic alignment." },
+              { k:"Recommendation", t:"Prioritize adjacent markets where existing capabilities and network advantages could create meaningful differentiation." },
+              { k:"Strategic value", t:"Provided leadership with a structured framework to compare growth opportunities and focus expansion decisions." },
+              { k:"Capability shown", t:"Market expansion strategy, opportunity sizing, and executive decision framing." }
             ]
           },
-          pipeline: {
-            title: "Pipeline & Funnel Measurement Standardization",
-            angle: "Growth + Rev alignment • Lifecycle clarity",
+
+          "portfolio": {
+            title: "Portfolio Strategy & Divestment Analysis",
+            angle: "Portfolio strategy • Capital allocation • Structural market headwinds",
             blocks: [
-              { k:"Context", t:"Marketing and Sales needed a shared funnel truth for performance and planning." },
-              { k:"What was broken", t:"Ambiguous lifecycle definitions and inconsistent conversion views." },
-              { k:"What I did", t:"Defined stages, conversion metrics, and visibility that supports coverage discussions." },
-              { k:"What shipped", t:"Lifecycle map, funnel dashboard, coverage targets V1." },
-              { k:"Adoption", t:"Aligned stakeholders on definitions and usage in operating rhythms." },
-              { k:"Outcomes", t:"Clearer accountability and improved planning inputs." },
-              { k:"Next", t:"Instrument buying-group and channel-level diagnostics." }
+              { k:"Context", t:"During a portfolio review, leadership needed to determine whether one CPS product remained strategically viable." },
+              { k:"Strategic question", t:"Should WEX continue investing in this product, or reallocate resources toward higher-value opportunities?" },
+              { k:"Approach", t:"Assessed market trends, growth outlook, product performance, competitive dynamics, and reinvestment vs. divestment scenarios." },
+              { k:"Key insights", t:"The product faced structural market headwinds and weaker long-term growth potential relative to other portfolio options." },
+              { k:"Recommendation", t:"Recommended divestment to allow capital and leadership focus to shift toward higher-growth areas." },
+              { k:"Strategic value", t:"Supported portfolio optimization and more disciplined allocation of investment across the business." },
+              { k:"Capability shown", t:"Portfolio strategy, investment tradeoff analysis, and strategic prioritization." }
             ]
           },
-          spend: {
-            title: "Spend → Revenue Linkage (Finance-grade Reporting)",
-            angle: "Ops + Finance alignment • ROI credibility",
+
+          "global-expansion": {
+            title: "Global Expansion Target Evaluation",
+            angle: "International strategy • Trade-off analysis • Market entry prioritization",
             blocks: [
-              { k:"Context", t:"Expense lived outside core performance tools; leaders needed credible connection to outcomes." },
-              { k:"What was broken", t:"Hard to reconcile expense, performance, and revenue across systems." },
-              { k:"What I did", t:"Defined mappings, reconciliation logic, and audit-friendly reporting views." },
-              { k:"What shipped", t:"Spend mappings, linked datasets, ROI views used in readouts." },
-              { k:"Adoption", t:"Enabled stakeholders with documentation and repeatable views." },
-              { k:"Outcomes", t:"Stronger budget allocation discussions grounded in consistent data." },
-              { k:"Next", t:"Expand to journey-level unit economics and incrementality." }
+              { k:"Context", t:"A TPG-managed pharmaceutical company was evaluating markets for global expansion." },
+              { k:"Strategic question", t:"Which expansion targets offered the strongest combination of regulatory feasibility, market opportunity, and economic attractiveness?" },
+              { k:"Approach", t:"Built a comparative framework evaluating regulatory barriers, market size, growth potential, and economic viability across candidate markets." },
+              { k:"Key insights", t:"Some markets offered attractive size but difficult regulatory hurdles; others had faster entry but lower long-term upside." },
+              { k:"Recommendation", t:"Prioritize markets balancing realistic entry feasibility with meaningful strategic growth potential." },
+              { k:"Strategic value", t:"Enabled leadership to compare global expansion paths using a structured trade-off framework rather than market size alone." },
+              { k:"Capability shown", t:"International growth strategy, market evaluation, and decision trade-off framing." }
             ]
           },
-          journey: {
-            title: "Customer Journey Measurement Framework",
-            angle: "Growth + Ops • Prioritize and optimize journeys",
+
+          "branch-performance": {
+            title: "Branch Performance Strategy",
+            angle: "Business performance • Commercial effectiveness • Operational strategy",
             blocks: [
-              { k:"Context", t:"Needed a structured way to prioritize journeys and focus optimization effort." },
-              { k:"What was broken", t:"Too many potential journeys; unclear KPI ownership and instrumentation requirements." },
-              { k:"What I did", t:"Built journey KPI mapping, prioritization criteria, and a repeatable optimization loop." },
-              { k:"What shipped", t:"Journey scorecard, KPI tree per stage, instrumentation checklist, test backlog template." },
-              { k:"Adoption", t:"Embedded into planning and readouts to keep focus on highest-leverage journeys." },
-              { k:"Outcomes", t:"Clearer prioritization and faster movement from insight to action." },
-              { k:"Next", t:"Layer in experimentation and incrementality by journey." }
+              { k:"Context", t:"Capital One launched TV advertising to drive mortgage demand, but branch-level results varied significantly." },
+              { k:"Strategic question", t:"Why were some branches seeing meaningful lift while others showed little improvement?" },
+              { k:"Approach", t:"Analyzed branch performance pre/post campaign, segmented branches into performance clusters, and identified operational differences." },
+              { k:"Key insights", t:"High-performing branches were already effective at lead conversion; mid-performing branches benefited most from advertising; low-performing branches lacked the operational capability to convert demand." },
+              { k:"Recommendation", t:"Standardize lead identification and conversion practices using best practices from top-performing branches." },
+              { k:"Strategic value", t:"Improved the effectiveness of marketing investment by linking commercial performance with operating capability." },
+              { k:"Capability shown", t:"Business performance strategy, operational diagnosis, and ROI improvement." }
             ]
           }
         };
 
-        const CASE_KEYS = ["kpi","pipeline","spend","journey"];
+        const CASE_KEYS = ["market-expansion","portfolio","global-expansion","branch-performance"];
 
         const caseTitle = document.getElementById("caseTitle");
         const caseAngle = document.getElementById("caseAngle");
@@ -162,9 +171,8 @@
         const prevBtn = document.getElementById("casePrev");
         const nextBtn = document.getElementById("caseNext");
         const pauseBtn = document.getElementById("casePause");
-        const cycleStatus = document.getElementById("caseCycleStatus");
 
-        let active = "kpi";
+        let active = "market-expansion";
         let paused = false;
         let timer = null;
 
@@ -191,7 +199,6 @@
           caseScreen.classList.add("csFadeIn");
 
           tabs.forEach(b => b.setAttribute("aria-pressed", (b.dataset.case === active).toString()));
-          cycleStatus.textContent = paused ? "Auto-rotate paused" : "Auto-rotating cases";
         }
 
         function nextCase(){
@@ -199,6 +206,7 @@
           active = CASE_KEYS[(i + 1) % CASE_KEYS.length];
           render();
         }
+
         function prevCase(){
           const i = CASE_KEYS.indexOf(active);
           active = CASE_KEYS[(i - 1 + CASE_KEYS.length) % CASE_KEYS.length];
@@ -207,39 +215,51 @@
 
         function start(){
           stop();
-          timer = setInterval(() => { if (!paused) nextCase(); }, CASE_MS);
+          timer = setInterval(() => {
+            if (!paused) nextCase();
+          }, CASE_MS);
         }
+
         function stop(){
           if (timer) clearInterval(timer);
           timer = null;
         }
 
-        nextBtn.addEventListener("click", () => { paused = true; pauseBtn.textContent = "Resume"; nextCase(); });
-        prevBtn.addEventListener("click", () => { paused = true; pauseBtn.textContent = "Resume"; prevCase(); });
+        nextBtn.addEventListener("click", () => {
+          paused = true;
+          pauseBtn.textContent = "Resume";
+          nextCase();
+        });
+
+        prevBtn.addEventListener("click", () => {
+          paused = true;
+          pauseBtn.textContent = "Resume";
+          prevCase();
+        });
 
         pauseBtn.addEventListener("click", () => {
           paused = !paused;
           pauseBtn.textContent = paused ? "Resume" : "Pause";
-          render();
         });
 
         tabs.forEach(btn => {
           btn.addEventListener("click", () => {
             active = btn.dataset.case;
-            paused = true; // pause when user selects manually
+            paused = true;
             pauseBtn.textContent = "Resume";
             render();
           });
         });
 
-        // pause auto rotate while reading
-        caseScreen.addEventListener("mouseenter", () => { paused = true; pauseBtn.textContent = "Resume"; render(); });
+        caseScreen.addEventListener("mouseenter", () => {
+          paused = true;
+          pauseBtn.textContent = "Resume";
+        });
 
         render();
         start();
       })();
     </script>
-
   </main>
 
   <footer class="footer">© Jessie Zhang</footer>
