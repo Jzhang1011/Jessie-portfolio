@@ -17,14 +17,14 @@
     <nav class="nav">
       <div class="brand">
         <div class="name">Jessie Zhang</div>
-        <div class="tag">Impact Library</div>
+        <div class="tag">Impact Across Strategy, Growth & Business Performance</div>
       </div>
       <div class="links">
         <a href="index.html">Home</a>
         <a class="active" href="impact.html">Impact</a>
         <a href="case-studies.html">Case Studies</a>
-        <a href="playbooks.html">Playbooks</a>
-        <a href="ai.html">AI</a>
+        <a href="playbooks.html">Frameworks</a>
+        <a href="ai.html">Decision Systems</a>
         <a href="about.html">About</a>
       </div>
     </nav>
@@ -34,16 +34,19 @@
 
     <!-- Header + Filters -->
     <section class="card">
-      <h1 style="margin-top:0">Impact Library</h1>
-      <p class="small">A curated showcase of the systems I build to increase executive trust, decision velocity, and adoption at scale.</p>
+      <h1 style="margin-top:0">Impact Highlights</h1>
+      <p class="small">
+        A curated view of the kinds of business problems I’ve worked on across consulting, business operations,
+        corporate strategy, growth performance, and decision infrastructure.
+      </p>
 
       <div class="badges" id="filters" aria-label="Filters">
         <button class="chip" aria-pressed="true" data-tag="All" type="button">All</button>
-        <button class="chip" aria-pressed="false" data-tag="Ops" type="button">Ops</button>
-        <button class="chip" aria-pressed="false" data-tag="Governance" type="button">Governance</button>
-        <button class="chip" aria-pressed="false" data-tag="Measurement" type="button">Measurement</button>
-        <button class="chip" aria-pressed="false" data-tag="Journey" type="button">Journey</button>
-        <button class="chip" aria-pressed="false" data-tag="AI" type="button">AI</button>
+        <button class="chip" aria-pressed="false" data-tag="Strategy" type="button">Strategy</button>
+        <button class="chip" aria-pressed="false" data-tag="Growth" type="button">Growth</button>
+        <button class="chip" aria-pressed="false" data-tag="Portfolio" type="button">Portfolio</button>
+        <button class="chip" aria-pressed="false" data-tag="Performance" type="button">Performance</button>
+        <button class="chip" aria-pressed="false" data-tag="Decision Systems" type="button">Decision Systems</button>
       </div>
     </section>
 
@@ -70,9 +73,9 @@
       </div>
 
       <div class="btnrow" style="margin-top:16px">
-        <a class="btn secondary" href="case-studies.html">See full case studies →</a>
-        <a class="btn secondary" href="playbooks.html">See playbooks →</a>
-        <a class="btn secondary" href="ai.html">AI work →</a>
+        <a class="btn secondary" href="case-studies.html">See strategy case studies →</a>
+        <a class="btn secondary" href="playbooks.html">See frameworks →</a>
+        <a class="btn secondary" href="ai.html">See decision systems →</a>
       </div>
     </section>
 
@@ -80,52 +83,52 @@
       (function(){
         const items = [
           {
-            title: "KPI Operating System (multi-LOB)",
-            desc: "Standardized KPI definitions + QA + operating rhythm so leadership forums focus on decisions, not metric debates.",
-            tags: ["Ops","Governance","Measurement"],
-            link: "case-studies.html#kpi-os"
+            title: "Adjacent market expansion opportunity assessment",
+            desc: "Evaluated adjacent markets for growth potential, competitive attractiveness, and strategic fit to support expansion decisions.",
+            tags: ["Strategy","Growth"],
+            link: "case-studies.html"
           },
           {
-            title: "Spend → revenue linkage (finance-grade)",
-            desc: "Connected expense and performance to revenue views to enable credible ROI conversations and investment allocation.",
-            tags: ["Ops","Measurement"],
-            link: "case-studies.html#spend-revenue"
+            title: "Portfolio strategy and divestment recommendation",
+            desc: "Assessed structural market headwinds and investment tradeoffs to support product portfolio optimization and capital allocation decisions.",
+            tags: ["Strategy","Portfolio"],
+            link: "case-studies.html"
           },
           {
-            title: "Funnel & lifecycle standardization (Marketing ↔ Sales)",
-            desc: "Defined lifecycle stages and conversion metrics to create a single funnel truth and improve planning inputs.",
-            tags: ["Ops","Measurement"],
-            link: "case-studies.html#pipeline"
+            title: "Global expansion target evaluation",
+            desc: "Built a trade-off framework across regulatory feasibility, economics, and market size to prioritize international expansion options.",
+            tags: ["Strategy","Growth"],
+            link: "case-studies.html"
           },
           {
-            title: "Journey measurement & prioritization",
-            desc: "Prioritized journeys and defined stage KPIs to focus optimization on the highest-leverage customer paths.",
-            tags: ["Journey","Measurement"],
-            link: "case-studies.html#journey"
+            title: "Business performance strategy for branch conversion",
+            desc: "Segmented branch performance and identified operational best practices to improve conversion and increase advertising ROI.",
+            tags: ["Performance","Growth"],
+            link: "case-studies.html"
           },
           {
-            title: "MIA: Marketing Intelligence Assistant",
-            desc: "Governed, role-based copilot with citations + no-inference rules to scale onboarding and self-serve intelligence.",
-            tags: ["AI","Ops","Governance"],
-            link: "ai.html#mia"
+            title: "Marketing investment governance and KPI architecture",
+            desc: "Built cross-LOB performance frameworks connecting marketing activity to business outcomes and leadership decision-making.",
+            tags: ["Performance","Decision Systems"],
+            link: "case-studies.html"
           },
           {
-            title: "MMM Copilot: learning + decision support",
-            desc: "Role- and scenario-based MMM enablement for channel owners and revenue marketers—always-on decision support.",
-            tags: ["AI","Measurement"],
+            title: "Marketing investment strategy using MMM",
+            desc: "Led MMM adoption and decision rhythms to help translate measurement signals into investment guidance and budget tradeoffs.",
+            tags: ["Portfolio","Decision Systems"],
             link: "ai.html#mmm"
           },
           {
-            title: "Executive reporting risk reduction",
-            desc: "Reduced “spreadsheet surprises” via locked logic, QA steps, and governance that protects credibility in exec forums.",
-            tags: ["Ops","Governance"],
-            link: "playbooks.html"
+            title: "Customer journey value measurement",
+            desc: "Developed a framework to identify which customer journeys create measurable value and deserve optimization focus.",
+            tags: ["Growth","Performance"],
+            link: "case-studies.html"
           },
           {
-            title: "AI adoption operating model",
-            desc: "Scaled adoption through training cohorts, ambassadors, office hours, and internal comms—built to stick.",
-            tags: ["AI","Ops"],
-            link: "playbooks.html"
+            title: "AI-enabled decision support infrastructure",
+            desc: "Built AI-driven knowledge access tools to improve decision speed, insight consistency, and organizational learning.",
+            tags: ["Decision Systems","Performance"],
+            link: "ai.html#mia"
           }
         ];
 
@@ -150,6 +153,7 @@
 
         function render(){
           const list = getActiveList();
+
           if (list.length === 0){
             el.innerHTML = `<div class="tileShow__desc">No items for this filter yet.</div>`;
             status.textContent = `No items`;
@@ -166,7 +170,7 @@
               <div>
                 <h3 class="tileShow__title">${it.title}</h3>
               </div>
-              <a class="tileShow__cta" href="${it.link}">Proof →</a>
+              <a class="tileShow__cta" href="${it.link}">Explore →</a>
             </div>
 
             <div class="tileShow__desc">${it.desc}</div>
@@ -183,27 +187,54 @@
           status.textContent = `Showing ${idx + 1} of ${list.length} (${activeTag})`;
         }
 
-        function goNext(){ idx += 1; render(); }
-        function goPrev(){ idx -= 1; render(); }
+        function goNext(){
+          idx += 1;
+          render();
+        }
+
+        function goPrev(){
+          idx -= 1;
+          render();
+        }
 
         function start(){
           stop();
-          timer = setInterval(() => { if (!paused) goNext(); }, 5000);
+          timer = setInterval(() => {
+            if (!paused) goNext();
+          }, 5000);
         }
+
         function stop(){
           if (timer) clearInterval(timer);
           timer = null;
         }
 
-        next.addEventListener("click", () => { paused = true; pause.textContent = "Resume"; goNext(); });
-        prev.addEventListener("click", () => { paused = true; pause.textContent = "Resume"; goPrev(); });
+        next.addEventListener("click", () => {
+          paused = true;
+          pause.textContent = "Resume";
+          goNext();
+        });
+
+        prev.addEventListener("click", () => {
+          paused = true;
+          pause.textContent = "Resume";
+          goPrev();
+        });
+
         pause.addEventListener("click", () => {
           paused = !paused;
           pause.textContent = paused ? "Resume" : "Pause";
         });
 
-        el.addEventListener("mouseenter", () => { paused = true; pause.textContent = "Resume"; });
-        el.addEventListener("mouseleave", () => { paused = false; pause.textContent = "Pause"; });
+        el.addEventListener("mouseenter", () => {
+          paused = true;
+          pause.textContent = "Resume";
+        });
+
+        el.addEventListener("mouseleave", () => {
+          paused = false;
+          pause.textContent = "Pause";
+        });
 
         filterBtns.forEach(btn => {
           btn.addEventListener('click', () => {
@@ -221,6 +252,6 @@
 
   </main>
 
-
+  <footer class="footer">© Jessie Zhang</footer>
 </body>
 </html>
