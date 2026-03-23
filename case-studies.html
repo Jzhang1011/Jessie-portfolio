@@ -40,11 +40,11 @@
       </p>
 
       <div class="caseTabs" id="caseTabs" aria-label="Case selector">
-        <button class="chip" type="button" aria-pressed="true" data-case="market-expansion">Market Expansion</button>
-        <button class="chip" type="button" aria-pressed="false" data-case="portfolio">Portfolio Strategy</button>
-        <button class="chip" type="button" aria-pressed="false" data-case="global-expansion">Global Expansion</button>
-        <button class="chip" type="button" aria-pressed="false" data-case="branch-performance">Business Performance</button>
-      </div>
+  <button class="chip" type="button" aria-pressed="true" data-case="noventis-divest">Portfolio Divestment</button>
+  <button class="chip" type="button" aria-pressed="false" data-case="payzer-dd">Acquisition Diligence (Payzer)</button>
+  <button class="chip" type="button" aria-pressed="false" data-case="ascensus-dd">Acquisition Diligence (Ascensus)</button>
+  <button class="chip" type="button" aria-pressed="false" data-case="enterprise-strategy">Enterprise Strategy & Performance</button>
+</div>
     </section>
 
     <!-- Two-column viewer -->
@@ -104,65 +104,64 @@
     <script>
       (function(){
         const CASES = {
-          "market-expansion": {
-            title: "Adjacent Market Expansion Strategy",
-            angle: "Corporate strategy • Growth opportunity evaluation • TAM + strategic fit",
-            blocks: [
-              { k:"Context", t:"WEX was evaluating adjacent market opportunities to support long-term growth beyond existing core segments." },
-              { k:"Strategic question", t:"Which adjacent markets offer the best balance of market size, competitive attractiveness, and strategic fit?" },
-              { k:"Approach", t:"Conducted market landscape analysis, TAM sizing, competitive assessment, and strategic fit evaluation." },
-              { k:"Key insights", t:"Some large markets had attractive size but weak fit or intense competition; a smaller set of opportunities offered stronger long-term strategic alignment." },
-              { k:"Recommendation", t:"Prioritize adjacent markets where existing capabilities and network advantages could create meaningful differentiation." },
-              { k:"Strategic value", t:"Provided leadership with a structured framework to compare growth opportunities and focus expansion decisions." },
-              { k:"Capability shown", t:"Market expansion strategy, opportunity sizing, and executive decision framing." }
-            ]
-          },
+  "noventis-divest": {
+    title: "Portfolio Strategy & Divestment Proposal (Noventis)",
+    angle: "Corporate strategy • Capital allocation • Portfolio optimization • Executive decision framing",
+    blocks: [
+      { k:"Role", t:"Strategy Lead — owned the strategic evaluation and recommendation; partnered with Finance and business leaders to build alignment and an executable path forward." },
+      { k:"Context", t:"Leadership needed to evaluate whether the business remained the right strategic fit given shifting priorities, market outlook, and the opportunity cost of capital and leadership attention." },
+      { k:"Strategic question", t:"Should we continue investing, pursue a repositioning path, or divest and reallocate resources to higher-value priorities?" },
+      { k:"Approach", t:"Built a portfolio decision framework (strategic fit, market attractiveness, competitive advantage, synergy relevance, execution complexity). Structured scenarios comparing hold vs divest vs alternative pathways, including what would need to be true for each option to win." },
+      { k:"Key insights", t:"Clarified the relative long-term upside and risks across scenarios and highlighted the most material constraints to value creation (structural headwinds, execution burden, and opportunity cost)." },
+      { k:"Recommendation", t:"Delivered an executive-ready recommendation with clear tradeoffs, risks, and activation steps—so the decision could be executed, not debated." },
+      { k:"Strategic value", t:"Supported disciplined portfolio focus and capital allocation, with a decision narrative leaders could stand behind." }
+    ]
+  },
 
-          "portfolio": {
-            title: "Portfolio Strategy & Divestment Analysis",
-            angle: "Portfolio strategy • Capital allocation • Structural market headwinds",
-            blocks: [
-              { k:"Context", t:"During a portfolio review, leadership needed to determine whether one CPS product remained strategically viable." },
-              { k:"Strategic question", t:"Should WEX continue investing in this product, or reallocate resources toward higher-value opportunities?" },
-              { k:"Approach", t:"Assessed market trends, growth outlook, product performance, competitive dynamics, and reinvestment vs. divestment scenarios." },
-              { k:"Key insights", t:"The product faced structural market headwinds and weaker long-term growth potential relative to other portfolio options." },
-              { k:"Recommendation", t:"Recommended divestment to allow capital and leadership focus to shift toward higher-growth areas." },
-              { k:"Strategic value", t:"Supported portfolio optimization and more disciplined allocation of investment across the business." },
-              { k:"Capability shown", t:"Portfolio strategy, investment tradeoff analysis, and strategic prioritization." }
-            ]
-          },
+  "payzer-dd": {
+    title: "Acquisition Strategy Due Diligence (Payzer)",
+    angle: "M&A diligence • Market/competitive analysis • Value creation thesis • Risk & dependency framing",
+    blocks: [
+      { k:"Role", t:"Diligence Workstream Lead — led strategic diligence and executive synthesis in partnership with cross-functional leaders." },
+      { k:"Context", t:"WEX pursued an acquisition to accelerate growth in a targeted segment. Leadership needed a clear view of strategic fit, differentiation, and what would determine success post-close." },
+      { k:"Strategic question", t:"Why this asset, why now, and why WEX wins—what must be true to create value, and where are the biggest risks?" },
+      { k:"Approach", t:"Translated thesis into diligence questions. Conducted market and competitive analysis, validated value pools and positioning assumptions, and pressure-tested execution dependencies with Product, GTM, Ops, and Finance." },
+      { k:"Key insights", t:"Identified the highest-confidence value creation levers and surfaced the assumptions and operational dependencies that would make or break outcomes." },
+      { k:"Recommendation", t:"Delivered an executive decision package: clear thesis, key risks/mitigations, and early integration priorities tied to measurable indicators." },
+      { k:"Strategic value", t:"Enabled faster executive alignment and a cleaner transition from diligence output to activation planning." }
+    ]
+  },
 
-          "global-expansion": {
-            title: "Global Expansion Target Evaluation",
-            angle: "International strategy • Trade-off analysis • Market entry prioritization",
-            blocks: [
-              { k:"Context", t:"A TPG-managed pharmaceutical company was evaluating markets for global expansion." },
-              { k:"Strategic question", t:"Which expansion targets offered the strongest combination of regulatory feasibility, market opportunity, and economic attractiveness?" },
-              { k:"Approach", t:"Built a comparative framework evaluating regulatory barriers, market size, growth potential, and economic viability across candidate markets." },
-              { k:"Key insights", t:"Some markets offered attractive size but difficult regulatory hurdles; others had faster entry but lower long-term upside." },
-              { k:"Recommendation", t:"Prioritize markets balancing realistic entry feasibility with meaningful strategic growth potential." },
-              { k:"Strategic value", t:"Enabled leadership to compare global expansion paths using a structured trade-off framework rather than market size alone." },
-              { k:"Capability shown", t:"International growth strategy, market evaluation, and decision trade-off framing." }
-            ]
-          },
+  "ascensus-dd": {
+    title: "Acquisition Strategy Due Diligence (Ascensus)",
+    angle: "Portfolio rationale • Competitive dynamics • Integration guardrails • Executive narrative",
+    blocks: [
+      { k:"Role", t:"Diligence Workstream Lead — owned the strategic diligence storyline and cross-functional input synthesis." },
+      { k:"Context", t:"Acquisition evaluation required a rigorous assessment of strategic fit and the conditions required to realize value post-close." },
+      { k:"Strategic question", t:"How does the acquisition strengthen the portfolio, what are the durable value creation pathways, and what risks need active governance?" },
+      { k:"Approach", t:"Assessed strategic fit, competitive landscape, and value creation levers. Identified key risks and ‘watch items.’ Built measurable leading indicators aligned to the thesis and translated findings into concise executive materials." },
+      { k:"Key insights", t:"Clarified where differentiation and value capture were strongest and where execution risk required explicit sequencing and accountability." },
+      { k:"Recommendation", t:"Presented a decision narrative connecting strategy → tradeoffs → required actions, including guardrails for tracking post-decision performance." },
+      { k:"Strategic value", t:"Helped leadership align on thesis, risks, and activation priorities with a measurable definition of success." }
+    ]
+  },
 
-          "branch-performance": {
-            title: "Branch Performance Strategy",
-            angle: "Business performance • Commercial effectiveness • Operational strategy",
-            blocks: [
-              { k:"Context", t:"Capital One launched TV advertising to drive mortgage demand, but branch-level results varied significantly." },
-              { k:"Strategic question", t:"Why were some branches seeing meaningful lift while others showed little improvement?" },
-              { k:"Approach", t:"Analyzed branch performance pre/post campaign, segmented branches into performance clusters, and identified operational differences." },
-              { k:"Key insights", t:"High-performing branches were already effective at lead conversion; mid-performing branches benefited most from advertising; low-performing branches lacked the operational capability to convert demand." },
-              { k:"Recommendation", t:"Standardize lead identification and conversion practices using best practices from top-performing branches." },
-              { k:"Strategic value", t:"Improved the effectiveness of marketing investment by linking commercial performance with operating capability." },
-              { k:"Capability shown", t:"Business performance strategy, operational diagnosis, and ROI improvement." }
-            ]
-          }
-        };
+  "enterprise-strategy": {
+    title: "Enterprise Strategy Activation: Multi-Year Roadmap + Performance Management",
+    angle: "Corporate strategy • Annual planning • Initiative prioritization • KPI governance & execution cadence",
+    blocks: [
+      { k:"Role", t:"Corporate strategy leader and operating partner — helped shape multi-year direction and built the execution visibility needed to activate strategy." },
+      { k:"Context", t:"In a multi-business environment, strategy success depended on aligning leaders on priorities and building a system to track progress and drive tradeoffs." },
+      { k:"Strategic question", t:"How do we translate long-term strategic intent into a prioritized set of initiatives, clear owners, measurable outcomes, and an operating rhythm that accelerates execution?" },
+      { k:"Approach", t:"Established prioritization criteria (strategic fit, value, feasibility, dependencies). Built KPI frameworks and performance narratives to support exec planning and reviews. Created governance routines to keep initiatives aligned, accountable, and decision-relevant." },
+      { k:"Key insights", t:"Most friction was not ‘lack of data’ but inconsistent definitions, unclear ownership, and missing decision forums. Fixing governance improved both speed and quality of decisions." },
+      { k:"Recommendation", t:"Implement a repeatable strategy-to-execution system: shared priorities, defined success measures, and an executive cadence to monitor progress, surface risks early, and make tradeoffs." },
+      { k:"Strategic value", t:"Made strategy actionable by institutionalizing performance management and initiative tracking—so the organization moved faster with greater alignment." }
+    ]
+  }
+};
 
-        const CASE_KEYS = ["market-expansion","portfolio","global-expansion","branch-performance"];
-
+const CASE_KEYS = ["noventis-divest","payzer-dd","ascensus-dd","enterprise-strategy"];
         const caseTitle = document.getElementById("caseTitle");
         const caseAngle = document.getElementById("caseAngle");
         const caseScreen = document.getElementById("caseScreen");
@@ -172,7 +171,7 @@
         const nextBtn = document.getElementById("caseNext");
         const pauseBtn = document.getElementById("casePause");
 
-        let active = "market-expansion";
+        let active = "noventis-divest";
         let paused = false;
         let timer = null;
 
