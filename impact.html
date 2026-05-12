@@ -12,12 +12,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="impact">
   <header class="topbar">
     <nav class="nav">
       <div class="brand">
         <div class="name">Jessie Zhang</div>
-        <div class="tag">Impact Across Strategy, Growth & Business Performance</div>
+        <div class="tag">Impact</div>
       </div>
       <div class="links">
         <a href="index.html">Home</a>
@@ -31,225 +31,92 @@
   </header>
 
   <main class="container">
-
-    <!-- Header + Filters -->
     <section class="card">
-      <h1 style="margin-top:0">Impact Highlights</h1>
+      <h1 style="margin-top:0">Impact</h1>
       <p class="small">
-        A curated view of the kinds of business problems I’ve worked on across consulting, business operations,
-        corporate strategy, growth performance, and decision infrastructure.
+        A few outcomes I’m proud of—focused on building repeatable systems that improve decision quality,
+        operating cadence, and growth performance.
       </p>
+    </section>
 
-      <div class="badges" id="filters" aria-label="Filters">
-        <button class="chip" aria-pressed="true" data-tag="All" type="button">All</button>
-        <button class="chip" aria-pressed="false" data-tag="Strategy" type="button">Strategy</button>
-        <button class="chip" aria-pressed="false" data-tag="Growth" type="button">Growth</button>
-        <button class="chip" aria-pressed="false" data-tag="Portfolio" type="button">Portfolio</button>
-        <button class="chip" aria-pressed="false" data-tag="Performance" type="button">Performance</button>
-        <button class="chip" aria-pressed="false" data-tag="Decision Systems" type="button">Decision Systems</button>
+    <section class="impact-grid" style="margin-top:14px">
+      <div class="impact-card">
+        <div class="impact-top">
+          <h3>$42M annual investment optimized</h3>
+          <div class="impact-proof"><a href="case-studies.html#mmm">See how →</a></div>
+        </div>
+        <p>
+          Led MMM and advanced diagnostics to inform where to reallocate marketing investment across channels and programs,
+          balancing short-term pipeline coverage and longer-term growth.
+        </p>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-top">
+          <h3>12% performance lift from reallocation</h3>
+          <div class="impact-proof"><a href="case-studies.html#mmm">Details →</a></div>
+        </div>
+        <p>
+          Translated model output into executive decisions, guardrails, and follow-on monitoring—so teams could act quickly and
+          validate impact after changes were made.
+        </p>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-top">
+          <h3>AI copilot: 4-team pilot, 80% quality pass rate</h3>
+          <div class="impact-proof"><a href="case-studies.html#copilot">See case →</a></div>
+        </div>
+        <p>
+          Built an AI-enabled Marketing Intelligence Copilot grounded in SME knowledge; established evaluation criteria and an adoption system
+          (ambassadors, playbooks, office hours) to scale usage beyond a demo.
+        </p>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-top">
+          <h3>Operating rhythm that drives accountability</h3>
+          <div class="impact-proof"><a href="case-studies.html#rev-os">See system →</a></div>
+        </div>
+        <p>
+          Created KPI trees, standardized definitions, and executive narratives for business reviews—turning dashboards into decisions,
+          and decisions into follow-through.
+        </p>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-top">
+          <h3>14% acquisition lift through enablement rollout</h3>
+          <div class="impact-proof"><a href="case-studies.html#conversion">See play →</a></div>
+        </div>
+        <p>
+          Improved conversion by pairing media optimization with sales operations enablement (workflows, reporting, and playbooks),
+          scaling a proven approach across 88 branches.
+        </p>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-top">
+          <h3>Enterprise deal: signed 5-year flagship contract</h3>
+          <div class="impact-proof"><a href="about.html">Background →</a></div>
+        </div>
+        <p>
+          As a startup founder, secured a 5-year enterprise contract with a top home appliance manufacturer in China—creating a flagship reference
+          customer and accelerating mid-market expansion.
+        </p>
       </div>
     </section>
 
-    <!-- BIG centered showcase -->
-    <section class="card showcase-card" style="margin-top:16px">
-      <div class="showcase-head">
-        <div>
-          <h2 style="margin:0">Impact showcase</h2>
-          <p class="small" id="showStatus" style="margin:8px 0 0">Showing 1 of 8</p>
-        </div>
-
-        <div class="impact-rotator__btns">
-          <button class="btn secondary" id="showPrev" type="button">Prev</button>
-          <button class="btn secondary" id="showNext" type="button">Next</button>
-          <button class="btn secondary" id="showPause" type="button">Pause</button>
-        </div>
-      </div>
-
-      <!-- iPad hands mockup with live screen overlay -->
-      <div class="ipad-hands" aria-label="Impact tiles rotating in iPad mockup">
-        <div class="ipad-screen">
-          <div class="tileShow tileShow--big" id="tileShow"></div>
-        </div>
-      </div>
-
-      <div class="btnrow" style="margin-top:16px">
-        <a class="btn secondary" href="case-studies.html">See strategy case studies →</a>
-        <a class="btn secondary" href="playbooks.html">See frameworks →</a>
-        <a class="btn secondary" href="ai.html">See decision systems →</a>
+    <section class="card" style="margin-top:14px">
+      <h2>Want the artifacts?</h2>
+      <p class="small">
+        I keep my work grounded in reusable templates—KPI trees, review decks, decision memos, and “leading indicator” dashboards.
+      </p>
+      <div class="btnrow">
+        <a class="btn" href="playbooks.html">Frameworks →</a>
+        <a class="btn" href="case-studies.html">Case studies →</a>
       </div>
     </section>
-
-    <script>
-      (function(){
-        const items = [
-          {
-            title: "Adjacent market expansion opportunity assessment",
-            desc: "Evaluated adjacent markets for growth potential, competitive attractiveness, and strategic fit to support expansion decisions.",
-            tags: ["Strategy","Growth"],
-            link: "case-studies.html"
-          },
-          {
-            title: "Portfolio strategy and divestment recommendation",
-            desc: "Assessed structural market headwinds and investment tradeoffs to support product portfolio optimization and capital allocation decisions.",
-            tags: ["Strategy","Portfolio"],
-            link: "case-studies.html"
-          },
-          {
-            title: "Global expansion target evaluation",
-            desc: "Built a trade-off framework across regulatory feasibility, economics, and market size to prioritize international expansion options.",
-            tags: ["Strategy","Growth"],
-            link: "case-studies.html"
-          },
-          {
-            title: "Business performance strategy for branch conversion",
-            desc: "Segmented branch performance and identified operational best practices to improve conversion and increase advertising ROI.",
-            tags: ["Performance","Growth"],
-            link: "case-studies.html"
-          },
-          {
-            title: "Marketing investment governance and KPI architecture",
-            desc: "Built cross-LOB performance frameworks connecting marketing activity to business outcomes and leadership decision-making.",
-            tags: ["Performance","Decision Systems"],
-            link: "case-studies.html"
-          },
-          {
-            title: "Marketing investment strategy using MMM",
-            desc: "Led MMM adoption and decision rhythms to help translate measurement signals into investment guidance and budget tradeoffs.",
-            tags: ["Portfolio","Decision Systems"],
-            link: "ai.html#mmm"
-          },
-          {
-            title: "Customer journey value measurement",
-            desc: "Developed a framework to identify which customer journeys create measurable value and deserve optimization focus.",
-            tags: ["Growth","Performance"],
-            link: "case-studies.html"
-          },
-          {
-            title: "AI-enabled decision support infrastructure",
-            desc: "Built AI-driven knowledge access tools to improve decision speed, insight consistency, and organizational learning.",
-            tags: ["Decision Systems","Performance"],
-            link: "ai.html#mia"
-          }
-        ];
-
-        const el = document.getElementById("tileShow");
-        const status = document.getElementById("showStatus");
-        const prev = document.getElementById("showPrev");
-        const next = document.getElementById("showNext");
-        const pause = document.getElementById("showPause");
-
-        const filterBar = document.getElementById('filters');
-        const filterBtns = Array.from(filterBar.querySelectorAll('button[data-tag]'));
-        let activeTag = "All";
-
-        let idx = 0;
-        let paused = false;
-        let timer = null;
-
-        function getActiveList(){
-          if (activeTag === "All") return items;
-          return items.filter(i => i.tags.includes(activeTag));
-        }
-
-        function render(){
-          const list = getActiveList();
-
-          if (list.length === 0){
-            el.innerHTML = `<div class="tileShow__desc">No items for this filter yet.</div>`;
-            status.textContent = `No items`;
-            return;
-          }
-
-          if (idx >= list.length) idx = 0;
-          if (idx < 0) idx = list.length - 1;
-
-          const it = list[idx];
-
-          el.innerHTML = `
-            <div class="tileShow__top">
-              <div>
-                <h3 class="tileShow__title">${it.title}</h3>
-              </div>
-              <a class="tileShow__cta" href="${it.link}">Explore →</a>
-            </div>
-
-            <div class="tileShow__desc">${it.desc}</div>
-
-            <div class="tileShow__tags">
-              ${it.tags.map(t => `<span class="chip static">${t}</span>`).join("")}
-            </div>
-          `;
-
-          el.classList.remove("tileFadeIn");
-          void el.offsetWidth;
-          el.classList.add("tileFadeIn");
-
-          status.textContent = `Showing ${idx + 1} of ${list.length} (${activeTag})`;
-        }
-
-        function goNext(){
-          idx += 1;
-          render();
-        }
-
-        function goPrev(){
-          idx -= 1;
-          render();
-        }
-
-        function start(){
-          stop();
-          timer = setInterval(() => {
-            if (!paused) goNext();
-          }, 5000);
-        }
-
-        function stop(){
-          if (timer) clearInterval(timer);
-          timer = null;
-        }
-
-        next.addEventListener("click", () => {
-          paused = true;
-          pause.textContent = "Resume";
-          goNext();
-        });
-
-        prev.addEventListener("click", () => {
-          paused = true;
-          pause.textContent = "Resume";
-          goPrev();
-        });
-
-        pause.addEventListener("click", () => {
-          paused = !paused;
-          pause.textContent = paused ? "Resume" : "Pause";
-        });
-
-        el.addEventListener("mouseenter", () => {
-          paused = true;
-          pause.textContent = "Resume";
-        });
-
-        el.addEventListener("mouseleave", () => {
-          paused = false;
-          pause.textContent = "Pause";
-        });
-
-        filterBtns.forEach(btn => {
-          btn.addEventListener('click', () => {
-            activeTag = btn.dataset.tag;
-            idx = 0;
-            filterBtns.forEach(b => b.setAttribute('aria-pressed', (b.dataset.tag === activeTag).toString()));
-            render();
-          });
-        });
-
-        render();
-        start();
-      })();
-    </script>
-
   </main>
 
   <footer class="footer">© Jessie Zhang</footer>
